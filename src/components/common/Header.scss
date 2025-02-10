@@ -1,0 +1,22 @@
+.flex-container {
+    display: flex;
+    justify-content: space-between; /* Ensures space is distributed, we'll adjust this */
+    flex-wrap: nowrap; /* Keeps all items on one line */
+    background-color: antiquewhite;
+    margin-bottom: 1rem;
+}
+
+.box {
+    cursor: pointer;
+    padding: 20px;
+    margin: 5px;
+    text-align: center;
+    flex: 1; /* Allows boxes to grow equally in their space */
+}
+
+.last {
+    margin-left: auto; /* Push this item to the end of the flex container */
+}
+.active{
+    background-color: rgb(218, 176, 124);
+}

@@ -1,35 +1,41 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import "./App.css";
+import SearchPage from "./components/search/serach_index";
+import Profile from "./components/profile/profile_index";
+import { useTranslation } from "react-i18next";
+import {
+  BrowserRouter as Router,
+  Navigate,
+  Route,
+  Routes,
+} from 'react-router-dom';
 
+import "primereact/resources/themes/lara-light-cyan/theme.css";
+import 'primeflex/primeflex.css';
+import Project from "./components/project/project_index";
+import AdminPage from "./components/admin/admin_index";
 function App() {
-  const [count, setCount] = useState(0)
-
+  const { t, i18n } = useTranslation();
+  
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      
+      <Router>
+        <Routes>
+          <Route path="/">
+            <Route index element={<SearchPage />} />
+
+            {/* <Route path="explore" element={<ExploreView />} />
+            <Route path="explore/my-projects" element={<ExploreView />} />
+            */}
+            <Route path="profile/:uuid" element={<Profile />} /> 
+            <Route path="project/:uuid" element={<Project />} /> 
+            <Route path="admin" element={<AdminPage />} /> 
+            <Route path="*" element={<Navigate to="/" replace />} />
+          </Route>
+        </Routes>
+    </Router>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

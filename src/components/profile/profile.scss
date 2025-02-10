@@ -1,0 +1,19 @@
+.flex-container-card-section {
+    display: flex;
+    justify-content: space-between; /* Ensures space is distributed, we'll adjust this */
+    flex-wrap: nowrap; /* Keeps all items on one line */
+    margin-bottom: 1rem;
+}
+
+.box-card {
+    cursor: pointer;
+    padding: 20px;
+    margin: 5px;
+    text-align: center;
+    flex: 1; /* Allows boxes to grow equally in their space */
+    background-color: rgb(193, 191, 184);
+}
+
+.last-card {
+    margin-left: auto; /* Push this item to the end of the flex container */
+}
