@@ -10,7 +10,9 @@ const Header = () =>{
     <div className={`box ${(location.pathname === '' || location.pathname === '/') ? 'active' : ''}`} onClick={()=>{
         navigation('/')
     }}>Logo</div>
-    <div className={`box ${(location.pathname === '/my-profile') ? 'active' : ''}`} >My Profile</div>
+    <div onClick={()=>{
+        navigation('/my-profile')
+    }} className={`box ${(location.pathname === '/my-profile') ? 'active' : ''}`} >My Profile</div>
     <div className={`box ${(location.pathname === '/admin') ? 'active' : ''}`}  onClick={()=>{
         navigation('/admin')
     }}>Admin</div>

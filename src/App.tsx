@@ -30,6 +30,8 @@ function App() {
             <Route path="profile/:uuid" element={<Profile />} /> 
             <Route path="project/:uuid" element={<Project />} /> 
             <Route path="admin" element={<AdminPage />} /> 
+            <Route path="my-profile" element={<Profile />} /> 
+
             <Route path="*" element={<Navigate to="/" replace />} />
           </Route>
         </Routes>

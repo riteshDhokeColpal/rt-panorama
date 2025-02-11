@@ -1,3 +1,4 @@
+import AdminApprovals from "../admin/approvals/admin_approvals";
 import Header from "../common/Header";
 import PastProject from "./past_project";
 import ProfileCardSection from "./profile_card_section";
@@ -16,6 +17,9 @@ const Profile = () =>{
                 </TabPanel>
                 <TabPanel header="Past Project">
                     <PastProject />
+                </TabPanel>
+                <TabPanel header="Approvals">
+                    <AdminApprovals />
                 </TabPanel>
                
             </TabView>
