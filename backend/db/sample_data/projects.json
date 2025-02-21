@@ -1,0 +1,62 @@
+[
+    {
+        "id": 1,
+        "name": "Sample Project 1",
+        "project_desc": "Description for project 1.",
+        "business_unit": "Unit A",
+        "start_date": 1672531200,
+        "end_date": 1680307200,  
+        "github_repo_url": "https://github.com/example/repo1",
+        "uuid": "a1b2c3d4e5f6g7h",
+        "date_added": 1675219600, 
+        "last_updated": 1682901600 
+    },
+    {
+        "id": 2,
+        "name": "Sample Project 2",
+        "project_desc": "Description for project 2.",
+        "business_unit": "Unit B",
+        "start_date": 1677628800, 
+        "end_date": 1685414400, 
+        "github_repo_url": "https://github.com/example/repo2",
+        "uuid": "i1j2k3l4m5n6o7p",
+        "date_added": 1678910400,  
+        "last_updated": 1683003200 
+    },
+    {
+        "id": 3,
+        "name": "Sample Project 3",
+        "project_desc": "Description for project 3.",
+        "business_unit": "Unit C",
+        "start_date": 1680307200, 
+        "end_date": 1688284800,    
+        "github_repo_url": "https://github.com/example/repo3",
+        "uuid": "q1r2s3t4u5v6w7x",
+        "date_added": 1682901600,  
+        "last_updated": 1688306400 
+    },
+    {
+        "id": 4,
+        "name": "Sample Project 4",
+        "project_desc": "Description for project 4.",
+        "business_unit": "Unit D",
+        "start_date": 1682997600,  
+        "end_date": 1690867200,    
+        "github_repo_url": "https://github.com/example/repo4",
+        "uuid": "y1z2a3b4c5d6e7f",
+        "date_added": 1688292000,  
+        "last_updated": 1690939200 
+    },
+    {
+        "id": 5,
+        "name": "Sample Project 5",
+        "project_desc": "Description for project 5.",
+        "business_unit": "Unit E",
+        "start_date": 1685683200, 
+        "end_date": 1693555200,    
+        "github_repo_url": "https://github.com/example/repo5",
+        "uuid": "g1h2i3j4k5l6m7n",
+        "date_added": 1690864200,  
+        "last_updated": 1693627200 
+    }
+]

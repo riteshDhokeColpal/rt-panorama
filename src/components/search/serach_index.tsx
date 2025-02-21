@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { Dropdown } from "primereact/dropdown";
 import { AutoComplete } from "primereact/autocomplete";
-import getMembers from "../../service/members/members";
-import getProjects from "../../service/project/project_service";
+import {fetchAllMembers} from "../../service/members/members";
+import {fetchAllProjects} from "../../service/project/project_service";
+import {fetchAllMasterSkills} from '../../service/skills/masterSkills'
 import { useNavigate } from "react-router-dom";
 import { Button } from "primereact/button";
 import Header from "../common/Header";
@@ -15,18 +16,39 @@ const SearchPage = () => {
 
   // Fetch members data and set it in state
   useEffect(() => {
-    const fetchMembers = () => {
-      const data = getMembers(); // Assume getMembers is a promise-based function
-      setAutocomplete(data);
-    };
-    const fetchProjects = () => {
-      const data = getProjects(); // Assume getMembers is a promise-based function
-      setAutocomplete(data);
-    };
+
+    async function fetchMembers() {
+      try {
+        const membersData = await fetchAllMembers();
+        setAutocomplete(membersData);
+      } catch (error) {
+        console.error('Failed to fetch members:', error);
+      }
+    }
+
+    async function fetchProjects() {
+      try {
+        const projectData = await fetchAllProjects();
+        setAutocomplete(projectData);
+      } catch (error) {
+        console.error('Failed to fetch members:', error);
+      }
+    }
+    async function fetchMasterSkills() {
+      try {
+        const masterSkillstData = await fetchAllMasterSkills();
+        setAutocomplete(masterSkillstData);
+      } catch (error) {
+        console.error('Failed to fetch members:', error);
+      }
+    }
+    
     if (selectedSearchType?.code == "M") {
       fetchMembers();
     } else if (selectedSearchType?.code == "P") {
       fetchProjects();
+    }else if (selectedSearchType?.code == "S") {
+      fetchMasterSkills();
     } else {
       setAutocomplete([]);
     }
@@ -66,7 +88,7 @@ const SearchPage = () => {
           completeMethod={search} // Set the search function for autocomplete
           field="name" // Specify the field to show for suggestions, assuming it is 'name'
           onChange={(e) => setValue(e.value)}
-          onSelect={(e) => console.log("Selected:", e.value)} // Just an example event
+          // onSelect={(e) => console.log("Selected:", e.value)} // Just an example event
         />
       </div>
 
@@ -81,6 +103,9 @@ const SearchPage = () => {
               }
             } else if (selectedSearchType?.code == "P") {
               navigate(`/project/${value?.uuid}`);
+
+            } else if (selectedSearchType?.code == "S") {
+              navigate(`/member-by-skills/${value?.uuid}`);
 
             }
           }}

@@ -1,10 +1,10 @@
 const ProjectInfoCard = () => {
   return (
     <>
-      <div className="box-card">
-        <div>Current Project Name</div>
-        <div>Worked on Total Project 13</div>
-      </div>
+        <div><b>Current Project</b>
+        {/* <i className="pi pi-link" style={{color:"#d3020e",marginLeft:"5px"}}></i> */}
+        </div>
+        <div>Project ABC</div>
     </>
   );
 };

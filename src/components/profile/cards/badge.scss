@@ -1,0 +1,11 @@
+.badge-circle {
+    width: 15px; /* Set the diameter of the circle */
+    height: 15px; /* Set the diameter of the circle */
+    background-color: #d3020e; /* Set your desired background color */
+    border-radius: 50%; /* This makes the div a circle */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: inline-flex;
+  }

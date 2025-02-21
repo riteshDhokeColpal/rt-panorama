@@ -4,10 +4,12 @@ const GithubCard = () => {
     return (
       <>
         <div className="box-card">
-            <div>Github Image</div>
+            <div>
+              <i className="pi pi-github"></i>
+            </div>
           <div> Github Activity</div>
           <div>
-            <Button>Check</Button>
+            <i className="pi pi-external-link" style={{color:"#d3020e"}}></i>
           </div>
         </div>
       </>
