@@ -3,6 +3,7 @@ import { TreeNode } from "primereact/treenode";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { transformApiResponseToTreeData } from "../../utils/helpers";
+import './project_tree.scss'
 const ProjectTree = (props) => {
   const navigate = useNavigate();
   const [data, setData] = useState([]);

@@ -1,5 +1,4 @@
 export const transformApiResponseToTreeData = (apiResponse) => {
-    console.log(apiResponse);
     if (!apiResponse || !apiResponse.project || !Array.isArray(apiResponse.members)) {
         // Check if the API response structure is valid
         return [];
@@ -17,8 +16,8 @@ export const transformApiResponseToTreeData = (apiResponse) => {
         children: members?.map((member) => ({
           expanded: true,
           type: "person",
-          className: "text-white",
-          style: { borderRadius: "12px",backgroundColor:"#d3020e"  },
+          // className: "text-white",
+          style: { borderRadius: "12px",backgroundColor:"#fff",color:'#d3020e',border:'1px solid #d3020e'  },
           data: {
             image: "https://primefaces.org/cdn/primereact/images/avatar/annafali.png", // Placeholder image URL
             name: member.name,
@@ -27,8 +26,8 @@ export const transformApiResponseToTreeData = (apiResponse) => {
           },
           children: member.skills.filter(skill => skill).map((skill, index) => ({
             label: skill || `Skill ${index + 1}`,
-            className: "text-white",
-            style: { borderRadius: "12px",backgroundColor:"#d3020e" },
+            // className: "text-white",
+            style: { borderRadius: "12px",backgroundColor:"#fff",color:'#d3020e',border:'1px solid #d3020e' },
           })),
         })),
       },
@@ -70,6 +69,18 @@ export function convertUnixToYearMonth(unixTimestamp) {
   const month = months[date.getMonth()];
   
   return `${year} ${month}`;
+}
+
+export function convertUnixToMonthFullYear(unixTimestamp) {
+  const date = new Date(unixTimestamp * 1000); // Convert to milliseconds
+  const year = date.getFullYear();
+  const months = [
+    "January", "February", "March", "April", "May", "June",
+    "July", "August", "September", "October", "November", "December"
+  ];
+  const month = months[date.getMonth()];
+  
+  return `${month} ${year}`;
 }
 export function calculateDateDifference(startTimestamp, endTimestamp) {
   const startDate = new Date(startTimestamp * 1000); // Convert to milliseconds

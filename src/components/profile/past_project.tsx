@@ -6,10 +6,12 @@ import { Column } from "primereact/column";
 import { calculateDateDifference, convertUnixToYearMonth } from "../../utils/helpers";
 import { Button } from "primereact/button";
 import { useAtom } from "jotai";
-import { IsMyprofileDataAtom } from "../../atoms/my_profile";
+import { IsMyprofileDataAtom, MyprofileDataAtom } from "../../atoms/my_profile";
 
 const PastProject = () => {
   const [isMyProfile] = useAtom(IsMyprofileDataAtom);
+  const [profileData] = useAtom(MyprofileDataAtom);
+
 
   const { uuid } = useParams();
   const [data, setData] = useState([]);
@@ -24,8 +26,14 @@ const PastProject = () => {
           Alldata = await fetchPastProjectsOfMemberByUUID(uuid);
           setData(Alldata);
         } else {
+          if(profileData?.uuid){
+            Alldata = await fetchPastProjectsOfMemberByUUID(profileData?.uuid);
+            setData(Alldata);
+          }
           // Fetch the user's own profile, assume a function exists
           // data = await fetchOwnProfile();
+          // Alldata = await fetchPastProjectsOfMemberByUUID(uuid);
+          // setData(Alldata);
         }
       } catch (error) {
         console.error("Failed to fetch profile data:", error);
@@ -54,7 +62,11 @@ const PastProject = () => {
                   {calculateDateDifference(row.start_date,row.end_date)}
                   </>
                 }}></Column>
-                <Column field="github_repo_url" header="Git Repo"></Column>
+                <Column field="github_repo_url" header="Git Repo" body={(row)=>{
+                  return <>
+                  <a href={row.github_repo_url}>{row.name}</a>
+                  </>
+                }}></Column>
             </DataTable>
     </>
   );

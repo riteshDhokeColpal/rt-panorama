@@ -69,6 +69,7 @@ const RequestAssistModal = (props) =>{
           <label style={{marginRight:"0.6rem"}}>Assist Topic </label>
           <InputText
             id="username"
+            autoComplete='off'
             placeholder="Topic"
             className={`${topic ? "" : "p-invalid"} mr-2`}
             value={topic}

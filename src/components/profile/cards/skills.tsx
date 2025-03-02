@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import SkillsetModal from "../modals/skillset_modal";
 import { Dialog } from "primereact/dialog";
-import { fetchMemberSkillsByUuid } from './../../../service/skills/memberSkills';
+import { fetchMemberSkillsByUuid } from "./../../../service/skills/memberSkills";
 import { useAtom } from "jotai";
 import { profileDataAtom } from "../atoms/micro_level_member_atoms";
 import { IsMyprofileDataAtom } from "../../../atoms/my_profile";
@@ -16,59 +16,65 @@ const SkillCard = () => {
   const { uuid } = useParams(); // Get the uuid from the route params
 
   useEffect(() => {
-
     async function getSkills() {
-      let uuid_state = '';
-      if(isMyProfile){
+      let uuid_state = "";
+      if (isMyProfile) {
         uuid_state = profileData?.uuid;
-      }else{
-        uuid_state = uuid
+      } else {
+        uuid_state = uuid;
       }
       try {
         const skillsData = await fetchMemberSkillsByUuid(uuid_state);
         setSkills(skillsData);
       } catch (err) {
-        setError('Failed to fetch skills');
+        setError("Failed to fetch skills");
       }
     }
 
     if (memberUuid) {
       getSkills();
+    } else {
+      getSkills();
     }
-  }, [memberUuid,profileData]);
+  }, [memberUuid, profileData]);
+
   return (
     <>
       <div className="box-card">
         <div style={{ display: "flex" }}>
           {isMyProfile}
-          {(isMyProfile) && (
-        
-        <i className="pi pi-pencil"  onClick={() => {
-          setVisibleSkillsetModal(true);
-        }} style={{ color: '#d3020e',marginLeft: "auto" }}></i>
-        )}
-          
+          {isMyProfile && (
+            <i
+              className="pi pi-pencil"
+              onClick={() => {
+                setVisibleSkillsetModal(true);
+              }}
+              style={{ color: "#d3020e", marginLeft: "auto" }}
+            ></i>
+          )}
 
           <Dialog
-              header="Update Skillsets"
-              visible={visibleSkillsetModal}
-              style={{ width: "50vw" }}
-              onHide={() => {
-                if (!visibleSkillsetModal) return;
-                setVisibleSkillsetModal(false);
-              }}
-            >
-              <SkillsetModal skills={skills}/>
-            </Dialog>
-
-
+            header="Update Skillsets"
+            visible={visibleSkillsetModal}
+            style={{ width: "50vw" }}
+            onHide={() => {
+              if (!visibleSkillsetModal) return;
+              setVisibleSkillsetModal(false);
+            }}
+          >
+            <SkillsetModal skills={skills} />
+          </Dialog>
         </div>
-        <b>Skills</b><i className="pi pi-file-check" style={{color:"#d3020e",marginLeft:"5px"}}></i>
-        <ul style={{listStyleType:"none",padding:0}}>
-        {skills.map(skill => (
-          <li key={skill?.name}>{skill?.name}</li>
-        ))}
-      </ul>
+        <b>Skills</b>
+        <i
+          className="pi pi-file-check"
+          style={{ color: "#d3020e", marginLeft: "5px" }}
+        ></i>
+        <ul style={{ listStyleType: "none", padding: 0 }}>
+          {skills.map((skill) => (
+            <li key={skill?.name}>{skill?.name}</li>
+          ))}
+        </ul>
       </div>
     </>
   );

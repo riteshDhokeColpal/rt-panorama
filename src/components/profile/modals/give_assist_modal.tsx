@@ -65,6 +65,7 @@ const GiveAssistModal = (props) => {
           <InputText
             id="username"
             placeholder="Topic"
+             autoComplete="off"
             className={`${topic ? "" : "p-invalid"} mr-2`}
             value={topic}
             onChange={(e) => setTopic(e.target.value)}
@@ -74,6 +75,7 @@ const GiveAssistModal = (props) => {
           <label style={{marginRight:"2.3rem"}}>Description </label>
 
           <InputTextarea
+           autoComplete="off"
             autoResize
             value={desc}
             onChange={(e) => setDesc(e.target.value)}

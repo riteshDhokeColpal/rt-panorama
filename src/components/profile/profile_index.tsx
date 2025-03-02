@@ -45,7 +45,7 @@ const Profile = () =>{
 
         fetchProfile();
         
-    }, [uuid,setProfileData]);
+    }, [uuid,setProfileData,MyprofileData]);
 
    
 

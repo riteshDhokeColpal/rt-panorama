@@ -1,8 +1,9 @@
 [
     {
         "id": 1,
-        "name": "Sample Project 1",
-        "project_desc": "Description for project 1.",
+        "name": "Project Spark",
+        "project_desc": "The SmartHome Automation System project is designed to revolutionize household convenience and energy efficiency. This innovative platform integrates IoT technology to enable seamless control over home appliances through a centralized mobile application. With advanced automation features, users can set schedules, adjust settings remotely, and receive real-time alerts, ensuring optimal energy use and enhanced security. The project emphasizes user-friendly interfaces, high scalability, and robust security measures, making it an ideal solution for modern homes aiming to reduce their carbon footprint while simplifying daily tasks. The SmartHome System is set to redefine home automation standards, offering unmatched convenience and reliability.",
+
         "business_unit": "Unit A",
         "start_date": 1672531200,
         "end_date": 1680307200,  
@@ -13,8 +14,9 @@
     },
     {
         "id": 2,
-        "name": "Sample Project 2",
-        "project_desc": "Description for project 2.",
+        "name": "Demo Venture",
+        "project_desc": "The SmartHome Automation System project is designed to revolutionize household convenience and energy efficiency. This innovative platform integrates IoT technology to enable seamless control over home appliances through a centralized mobile application. With advanced automation features, users can set schedules, adjust settings remotely, and receive real-time alerts, ensuring optimal energy use and enhanced security. The project emphasizes user-friendly interfaces, high scalability, and robust security measures, making it an ideal solution for modern homes aiming to reduce their carbon footprint while simplifying daily tasks. The SmartHome System is set to redefine home automation standards, offering unmatched convenience and reliability.",
+
         "business_unit": "Unit B",
         "start_date": 1677628800, 
         "end_date": 1685414400, 
@@ -25,8 +27,8 @@
     },
     {
         "id": 3,
-        "name": "Sample Project 3",
-        "project_desc": "Description for project 3.",
+        "name": "Pilot Nexus",
+        "project_desc": "The SmartHome Automation System project is designed to revolutionize household convenience and energy efficiency. This innovative platform integrates IoT technology to enable seamless control over home appliances through a centralized mobile application. With advanced automation features, users can set schedules, adjust settings remotely, and receive real-time alerts, ensuring optimal energy use and enhanced security. The project emphasizes user-friendly interfaces, high scalability, and robust security measures, making it an ideal solution for modern homes aiming to reduce their carbon footprint while simplifying daily tasks. The SmartHome System is set to redefine home automation standards, offering unmatched convenience and reliability.",
         "business_unit": "Unit C",
         "start_date": 1680307200, 
         "end_date": 1688284800,    
@@ -37,8 +39,9 @@
     },
     {
         "id": 4,
-        "name": "Sample Project 4",
-        "project_desc": "Description for project 4.",
+        "name": "Test Horizon",
+        "project_desc": "The SmartHome Automation System project is designed to revolutionize household convenience and energy efficiency. This innovative platform integrates IoT technology to enable seamless control over home appliances through a centralized mobile application. With advanced automation features, users can set schedules, adjust settings remotely, and receive real-time alerts, ensuring optimal energy use and enhanced security. The project emphasizes user-friendly interfaces, high scalability, and robust security measures, making it an ideal solution for modern homes aiming to reduce their carbon footprint while simplifying daily tasks. The SmartHome System is set to redefine home automation standards, offering unmatched convenience and reliability.",
+
         "business_unit": "Unit D",
         "start_date": 1682997600,  
         "end_date": 1690867200,    
@@ -49,8 +52,9 @@
     },
     {
         "id": 5,
-        "name": "Sample Project 5",
-        "project_desc": "Description for project 5.",
+        "name": "Alpha Quest",
+        "project_desc": "The SmartHome Automation System project is designed to revolutionize household convenience and energy efficiency. This innovative platform integrates IoT technology to enable seamless control over home appliances through a centralized mobile application. With advanced automation features, users can set schedules, adjust settings remotely, and receive real-time alerts, ensuring optimal energy use and enhanced security. The project emphasizes user-friendly interfaces, high scalability, and robust security measures, making it an ideal solution for modern homes aiming to reduce their carbon footprint while simplifying daily tasks. The SmartHome System is set to redefine home automation standards, offering unmatched convenience and reliability.",
+
         "business_unit": "Unit E",
         "start_date": 1685683200, 
         "end_date": 1693555200,    

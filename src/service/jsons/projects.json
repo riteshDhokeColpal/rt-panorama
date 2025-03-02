@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "name": "Sample Project 1",
+        "name": "Project Spark",
         "project_desc": "Description for project 1.",
         "business_unit": "Unit A",
         "start_date": 1672531200,
@@ -13,7 +13,7 @@
     },
     {
         "id": 2,
-        "name": "Sample Project 2",
+        "name": "Demo Venture",
         "project_desc": "Description for project 2.",
         "business_unit": "Unit B",
         "start_date": 1677628800, 
@@ -25,7 +25,7 @@
     },
     {
         "id": 3,
-        "name": "Sample Project 3",
+        "name": "Pilot Nexus",
         "project_desc": "Description for project 3.",
         "business_unit": "Unit C",
         "start_date": 1680307200, 
@@ -37,7 +37,7 @@
     },
     {
         "id": 4,
-        "name": "Sample Project 4",
+        "name": "Test Horizon",
         "project_desc": "Description for project 4.",
         "business_unit": "Unit D",
         "start_date": 1682997600,  
@@ -49,7 +49,7 @@
     },
     {
         "id": 5,
-        "name": "Sample Project 5",
+        "name": "Alpha Quest",
         "project_desc": "Description for project 5.",
         "business_unit": "Unit E",
         "start_date": 1685683200, 
