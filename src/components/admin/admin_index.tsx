@@ -2,7 +2,7 @@ import Header from "../common/Header";
 import { TabView, TabPanel } from 'primereact/tabview';
 import AdminMembers from "./members/admin_members";
 import AdminProjects from "./projects/admin_projects";
-import AdminSkillset from "./skillset/admin_projects";
+import AdminSkillset from "./skillset/admin_skills";
 const AdminPage = () =>{
     return <>
     <Header />

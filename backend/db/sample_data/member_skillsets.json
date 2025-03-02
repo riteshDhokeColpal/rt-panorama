@@ -1,0 +1,77 @@
+[
+    {
+        "id": 1,
+        "member_id": 1,
+        "skillset_id": 3
+    },
+    {
+        "id": 2,
+        "member_id": 1,
+        "skillset_id": 4
+    },
+    {
+        "id": 3,
+        "member_id": 2,
+        "skillset_id": 6
+    },
+    {
+        "id": 4,
+        "member_id": 3,
+        "skillset_id": 1
+    },
+    {
+        "id": 5,
+        "member_id": 3,
+        "skillset_id": 5
+    },
+    {
+        "id": 6,
+        "member_id": 4,
+        "skillset_id": 8
+    },
+    {
+        "id": 7,
+        "member_id": 5,
+        "skillset_id": 2
+    },
+    {
+        "id": 8,
+        "member_id": 5,
+        "skillset_id": 9
+    },
+    {
+        "id": 9,
+        "member_id": 6,
+        "skillset_id": 2
+    },
+    {
+        "id": 10,
+        "member_id": 7,
+        "skillset_id": 1
+    },
+    {
+        "id": 11,
+        "member_id": 7,
+        "skillset_id": 4
+    },
+    {
+        "id": 12,
+        "member_id": 8,
+        "skillset_id": 10
+    },
+    {
+        "id": 13,
+        "member_id": 9,
+        "skillset_id": 5
+    },
+    {
+        "id": 14,
+        "member_id": 10,
+        "skillset_id": 7
+    },
+    {
+        "id": 15,
+        "member_id": 10,
+        "skillset_id": 1
+    }
+]

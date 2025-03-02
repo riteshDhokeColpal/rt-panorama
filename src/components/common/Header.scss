@@ -2,8 +2,9 @@
     display: flex;
     justify-content: space-between; /* Ensures space is distributed, we'll adjust this */
     flex-wrap: nowrap; /* Keeps all items on one line */
-    background-color: antiquewhite;
+    background-color: #d3020e;
     margin-bottom: 1rem;
+    border-radius: 10px;
 }
 
 .box {
@@ -12,11 +13,14 @@
     margin: 5px;
     text-align: center;
     flex: 1; /* Allows boxes to grow equally in their space */
+    color: white;
 }
 
 .last {
     margin-left: auto; /* Push this item to the end of the flex container */
 }
 .active{
-    background-color: rgb(218, 176, 124);
+    background-color: rgb(255 255 255);
+    color: #d3020e;
+    border-radius: 14px;
 }

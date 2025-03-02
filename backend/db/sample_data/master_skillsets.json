@@ -1,0 +1,52 @@
+[
+    {
+        "id": 1,
+        "uuid": "SK101",
+        "skillset": "JavaScript"
+    },
+    {
+        "id": 2,
+        "uuid": "SK102",
+        "skillset": "Python"
+    },
+    {
+        "id": 3,
+        "uuid": "SK103",
+        "skillset": "React"
+    },
+    {
+        "id": 4,
+        "uuid": "SK104",
+        "skillset": "Node.js"
+    },
+    {
+        "id": 5,
+        "uuid": "SK105",
+        "skillset": "SQL"
+    },
+    {
+        "id": 6,
+        "uuid": "SK106",
+        "skillset": "Java"
+    },
+    {
+        "id": 7,
+        "uuid": "SK107",
+        "skillset": "C++"
+    },
+    {
+        "id": 8,
+        "uuid": "SK108",
+        "skillset": "HTML & CSS"
+    },
+    {
+        "id": 9,
+        "uuid": "SK109",
+        "skillset": "Docker"
+    },
+    {
+        "id": 10,
+        "uuid": "SK110",
+        "skillset": "Kubernetes"
+    }
+]

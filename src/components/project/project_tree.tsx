@@ -1,146 +1,154 @@
 import { OrganizationChart } from "primereact/organizationchart";
 import { TreeNode } from "primereact/treenode";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-const ProjectTree = () => {
+import { transformApiResponseToTreeData } from "../../utils/helpers";
+import './project_tree.scss'
+const ProjectTree = (props) => {
   const navigate = useNavigate();
-  const [data] = useState<TreeNode[]>([
-    {
-      expanded: true,
-      label: "Sample Project",
-      className: "bg-teal-500 text-white",
-      style: { borderRadius: "12px" },
-      children: [
-        {
-          expanded: false,
-          type: "person",
-          className: "bg-purple-500 text-white",
-          style: { borderRadius: "12px" },
-          data: {
-            image:
-              "https://primefaces.org/cdn/primereact/images/avatar/annafali.png",
-            name: "Anna Fali",
-            title: "CMO",
-            uuid: "1234",
-          },
-          children: [
-            {
-              label: "Sales",
-              className: "bg-purple-500 text-white",
-              style: { borderRadius: "12px" },
-            },
-            {
-              label: "Marketing",
-              className: "bg-purple-500 text-white",
-              style: { borderRadius: "12px" },
-            },
-          ],
-        },
+  const [data, setData] = useState([]);
+  useEffect(()=>{
+    const treeData = transformApiResponseToTreeData(props.ProjectMembers)
+    setData(treeData);
 
-        {
-          expanded: false,
-          type: "person",
-          className: "bg-purple-500 text-white",
-          style: { borderRadius: "12px" },
-          data: {
-            image:
-              "https://primefaces.org/cdn/primereact/images/avatar/annafali.png",
-            name: "Anna Fali",
-            title: "CMO",
-            uuid: "1234",
-          },
-          children: [
-            {
-              label: "Sales",
-              className: "bg-purple-500 text-white",
-              style: { borderRadius: "12px" },
-            },
-            {
-              label: "Marketing",
-              className: "bg-purple-500 text-white",
-              style: { borderRadius: "12px" },
-            },
-          ],
-        },
-        {
-          expanded: false,
-          type: "person",
-          className: "bg-purple-500 text-white",
-          style: { borderRadius: "12px" },
-          data: {
-            image:
-              "https://primefaces.org/cdn/primereact/images/avatar/annafali.png",
-            name: "Anna Fali",
-            title: "CMO",
-            uuid: "1234",
-          },
-          children: [
-            {
-              label: "Sales",
-              className: "bg-purple-500 text-white",
-              style: { borderRadius: "12px" },
-            },
-            {
-              label: "Marketing",
-              className: "bg-purple-500 text-white",
-              style: { borderRadius: "12px" },
-            },
-          ],
-        },
-        {
-          expanded: false,
-          type: "person",
-          className: "bg-purple-500 text-white",
-          style: { borderRadius: "12px" },
-          data: {
-            image:
-              "https://primefaces.org/cdn/primereact/images/avatar/annafali.png",
-            name: "Anna Fali",
-            title: "CMO",
-            uuid: "1234",
-          },
-          children: [
-            {
-              label: "Sales",
-              className: "bg-purple-500 text-white",
-              style: { borderRadius: "12px" },
-            },
-            {
-              label: "Marketing",
-              className: "bg-purple-500 text-white",
-              style: { borderRadius: "12px" },
-            },
-          ],
-        },
-        {
-          expanded: false,
-          type: "person",
-          className: "bg-purple-500 text-white",
-          style: { borderRadius: "12px" },
-          data: {
-            image:
-              "https://primefaces.org/cdn/primereact/images/avatar/annafali.png",
-            name: "Anna Fali",
-            title: "CMO",
-            uuid: "1234",
-          },
-          children: [
-            {
-              label: "Sales",
-              className: "bg-purple-500 text-white",
-              style: { borderRadius: "12px" },
-            },
-            {
-              label: "Marketing",
-              className: "bg-purple-500 text-white",
-              style: { borderRadius: "12px" },
-            },
-          ],
-        },
-      ],
-    },
-  ]);
+  },[props])
+  // const [data] = useState<TreeNode[]>([
+  //   {
+  //     expanded: true,
+  //     label: "Sample Project",
+  //     className: "bg-teal-500 text-white",
+  //     style: { borderRadius: "12px" },
+  //     children: [
+  //       {
+  //         expanded: false,
+  //         type: "person",
+  //         className: "bg-purple-500 text-white",
+  //         style: { borderRadius: "12px" },
+  //         data: {
+  //           image:
+  //             "https://primefaces.org/cdn/primereact/images/avatar/annafali.png",
+  //           name: "Anna Fali",
+  //           title: "CMO",
+  //           uuid: "1234",
+  //         },
+  //         children: [
+  //           {
+  //             label: "Sales",
+  //             className: "bg-purple-500 text-white",
+  //             style: { borderRadius: "12px" },
+  //           },
+  //           {
+  //             label: "Marketing",
+  //             className: "bg-purple-500 text-white",
+  //             style: { borderRadius: "12px" },
+  //           },
+  //         ],
+  //       },
 
+  //       {
+  //         expanded: false,
+  //         type: "person",
+  //         className: "bg-purple-500 text-white",
+  //         style: { borderRadius: "12px" },
+  //         data: {
+  //           image:
+  //             "https://primefaces.org/cdn/primereact/images/avatar/annafali.png",
+  //           name: "Anna Fali",
+  //           title: "CMO",
+  //           uuid: "1234",
+  //         },
+  //         children: [
+  //           {
+  //             label: "Sales",
+  //             className: "bg-purple-500 text-white",
+  //             style: { borderRadius: "12px" },
+  //           },
+  //           {
+  //             label: "Marketing",
+  //             className: "bg-purple-500 text-white",
+  //             style: { borderRadius: "12px" },
+  //           },
+  //         ],
+  //       },
+  //       {
+  //         expanded: false,
+  //         type: "person",
+  //         className: "bg-purple-500 text-white",
+  //         style: { borderRadius: "12px" },
+  //         data: {
+  //           image:
+  //             "https://primefaces.org/cdn/primereact/images/avatar/annafali.png",
+  //           name: "Anna Fali",
+  //           title: "CMO",
+  //           uuid: "1234",
+  //         },
+  //         children: [
+  //           {
+  //             label: "Sales",
+  //             className: "bg-purple-500 text-white",
+  //             style: { borderRadius: "12px" },
+  //           },
+  //           {
+  //             label: "Marketing",
+  //             className: "bg-purple-500 text-white",
+  //             style: { borderRadius: "12px" },
+  //           },
+  //         ],
+  //       },
+  //       {
+  //         expanded: false,
+  //         type: "person",
+  //         className: "bg-purple-500 text-white",
+  //         style: { borderRadius: "12px" },
+  //         data: {
+  //           image:
+  //             "https://primefaces.org/cdn/primereact/images/avatar/annafali.png",
+  //           name: "Anna Fali",
+  //           title: "CMO",
+  //           uuid: "1234",
+  //         },
+  //         children: [
+  //           {
+  //             label: "Sales",
+  //             className: "bg-purple-500 text-white",
+  //             style: { borderRadius: "12px" },
+  //           },
+  //           {
+  //             label: "Marketing",
+  //             className: "bg-purple-500 text-white",
+  //             style: { borderRadius: "12px" },
+  //           },
+  //         ],
+  //       },
+  //       {
+  //         expanded: false,
+  //         type: "person",
+  //         className: "bg-purple-500 text-white",
+  //         style: { borderRadius: "12px" },
+  //         data: {
+  //           image:
+  //             "https://primefaces.org/cdn/primereact/images/avatar/annafali.png",
+  //           name: "Anna Fali",
+  //           title: "CMO",
+  //           uuid: "1234",
+  //         },
+  //         children: [
+  //           {
+  //             label: "Sales",
+  //             className: "bg-purple-500 text-white",
+  //             style: { borderRadius: "12px" },
+  //           },
+  //           {
+  //             label: "Marketing",
+  //             className: "bg-purple-500 text-white",
+  //             style: { borderRadius: "12px" },
+  //           },
+  //         ],
+  //       },
+  //     ],
+  //   },
+  // ]);
+  
   const nodeTemplate = (node: TreeNode) => {
     if (node.type === "person") {
       return (
@@ -160,7 +168,9 @@ const ProjectTree = () => {
 
     return node.label;
   };
-
+  if(data.length == 0){
+    return <>Loading...</>
+  }
   return (
     <div className="card overflow-x-auto">
       <OrganizationChart

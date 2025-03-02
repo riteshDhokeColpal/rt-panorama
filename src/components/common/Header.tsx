@@ -4,7 +4,6 @@ import {useLocation,useNavigate} from 'react-router-dom';
 const Header = () =>{
     const location = useLocation();
     const navigation = useNavigate();
-    console.log(location.pathname);
     return<>
     <div className="flex-container">
     <div className={`box ${(location.pathname === '' || location.pathname === '/') ? 'active' : ''}`} onClick={()=>{

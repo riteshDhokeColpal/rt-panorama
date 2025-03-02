@@ -1,8 +1,8 @@
 import ProjectTree from "./project_tree";
 
-const ProjectSection = () =>{
+const ProjectSection = (props) =>{
     return <>
-        <ProjectTree />
+        <ProjectTree ProjectMembers={props.ProjectMembers}/>
     </>
 }
 export default ProjectSection;

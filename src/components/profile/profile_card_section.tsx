@@ -24,9 +24,6 @@ const ProfileCardSection = () =>{
             <div className="box-card" style={{background:"none"}}>
             <ProjectInfoCard />
             </div>
-            <div className="box-card" style={{background:"none"}}>
-
-            </div>
         </div>
     </>
 }

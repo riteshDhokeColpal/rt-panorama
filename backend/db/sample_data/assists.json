@@ -1,0 +1,242 @@
+[
+    {
+        "id": 1,
+        "member_uuid": "A1B2C3D4E5F6G7H",
+        "assisted_to_uuid": "H7G6F5E4D3C2B1A",
+        "description": "Assisted with team planning",
+        "date_assist": 1667520000,
+        "topic": "Team Management"
+    },
+    {
+        "id": 2,
+        "member_uuid": "A1B2C3D4E5F6G7H",
+        "assisted_to_uuid": "J3K4L5M6N7O8P9Q",
+        "description": "Provided project updates",
+        "date_assist": 1675200000,
+        "topic": "Project Management"
+    },
+    {
+        "id": 3,
+        "member_uuid": "A1B2C3D4E5F6G7H",
+        "assisted_to_uuid": "R9Q8P7O6N5M4L3K",
+        "description": "Collaborated on feature development",
+        "date_assist": 1690972800,
+        "topic": "Product Development"
+    },
+    {
+        "id": 4,
+        "member_uuid": "A1B2C3D4E5F6G7H",
+        "assisted_to_uuid": "S2T3U4V5W6X7Y8Z",
+        "description": "Debugging assistance",
+        "date_assist": 1709059200,
+        "topic": "Technical Support"
+    },
+    {
+        "id": 5,
+        "member_uuid": "H7G6F5E4D3C2B1A",
+        "assisted_to_uuid": "Z8Y7X6W5V4U3T2S",
+        "description": "Test case development",
+        "date_assist": 1609459200,
+        "topic": "Quality Assurance"
+    },
+    {
+        "id": 6,
+        "member_uuid": "H7G6F5E4D3C2B1A",
+        "assisted_to_uuid": "P1Q2R3S4T5U6V7W",
+        "description": "Code review feedback",
+        "date_assist": 1640995200,
+        "topic": "Code Quality"
+    },
+    {
+        "id": 7,
+        "member_uuid": "H7G6F5E4D3C2B1A",
+        "assisted_to_uuid": "X1Y2Z3A4B5C6D7E",
+        "description": "Support on deployment",
+        "date_assist": 1672531200,
+        "topic": "Deployment"
+    },
+    {
+        "id": 8,
+        "member_uuid": "H7G6F5E4D3C2B1A",
+        "assisted_to_uuid": "E7F6G5H4I3J2K1L",
+        "description": "Mentoring on best practices",
+        "date_assist": 1708473600,
+        "topic": "Mentoring"
+    },
+    {
+        "id": 9,
+        "member_uuid": "J3K4L5M6N7O8P9Q",
+        "assisted_to_uuid": "M8N9O0P1Q2R3S4T",
+        "description": "Assisted with documentation",
+        "date_assist": 1643673600,
+        "topic": "Documentation"
+    },
+    {
+        "id": 10,
+        "member_uuid": "J3K4L5M6N7O8P9Q",
+        "assisted_to_uuid": "U4V5W6X7Y8Z9A0B",
+        "description": "Helped with bug fixing",
+        "date_assist": 1638316800,
+        "topic": "Issue Resolution"
+    },
+    {
+        "id": 11,
+        "member_uuid": "J3K4L5M6N7O8P9Q",
+        "assisted_to_uuid": "C1D2E3F4G5H6I7J",
+        "description": "Optimization suggestions",
+        "date_assist": 1680480000,
+        "topic": "Performance Optimization"
+    },
+    {
+        "id": 12,
+        "member_uuid": "J3K4L5M6N7O8P9Q",
+        "assisted_to_uuid": "K2L3M4N5O6P7Q8R",
+        "description": "Provided technical training",
+        "date_assist": 1715836800,
+        "topic": "Training"
+    },
+    {
+        "id": 13,
+        "member_uuid": "R9Q8P7O6N5M4L3K",
+        "assisted_to_uuid": "S3T4U5V6W7X8Y9Z",
+        "description": "Brainstormed solutions",
+        "date_assist": 1646092800,
+        "topic": "Solution Development"
+    },
+    {
+        "id": 14,
+        "member_uuid": "R9Q8P7O6N5M4L3K",
+        "assisted_to_uuid": "Z9A0B1C2D3E4F5G",
+        "description": "Prepared for presentation",
+        "date_assist": 1711190400,
+        "topic": "Presentation Preparation"
+    },
+    {
+        "id": 15,
+        "member_uuid": "R9Q8P7O6N5M4L3K",
+        "assisted_to_uuid": "H4I5J6K7L8M9N0O",
+        "description": "Provided UI/UX input",
+        "date_assist": 1721088000,
+        "topic": "UI/UX Design"
+    },
+    {
+        "id": 16,
+        "member_uuid": "R9Q8P7O6N5M4L3K",
+        "assisted_to_uuid": "P1Q2R3S4T5U6V7W",
+        "description": "Assisted in sprint planning",
+        "date_assist": 1682995200,
+        "topic": "Sprint Planning"
+    },
+    {
+        "id": 17,
+        "member_uuid": "R9Q8P7O6N5M4L3K",
+        "assisted_to_uuid": "X8Y7Z6A5B4C3D2E",
+        "description": "Facilitated QA testing",
+        "date_assist": 1697846400,
+        "topic": "Quality Assurance"
+    },
+    {
+        "id": 18,
+        "member_uuid": "S2T3U4V5W6X7Y8Z",
+        "assisted_to_uuid": "F6G5H4I3J2K1L0M",
+        "description": "Network configuration",
+        "date_assist": 1677628800,
+        "topic": "Network Administration"
+    },
+    {
+        "id": 19,
+        "member_uuid": "S2T3U4V5W6X7Y8Z",
+        "assisted_to_uuid": "N9O8P7Q6R5S4T3U",
+        "description": "Video conferencing setup",
+        "date_assist": 1695446400,
+        "topic": "IT Support"
+    },
+    {
+        "id": 20,
+        "member_uuid": "S2T3U4V5W6X7Y8Z",
+        "assisted_to_uuid": "A1B2C3D4E5F6G7H",
+        "description": "Remote work guidance",
+        "date_assist": 1718668800,
+        "topic": "Remote Work"
+    },
+    {
+        "id": 21,
+        "member_uuid": "S2T3U4V5W6X7Y8Z",
+        "assisted_to_uuid": "H7G6F5E4D3C2B1A",
+        "description": "Compiled research data",
+        "date_assist": 1706918400,
+        "topic": "Research and Development"
+    },
+    {
+        "id": 22,
+        "member_uuid": "Z8Y7X6W5V4U3T2S",
+        "assisted_to_uuid": "M8N9O0P1Q2R3S4T",
+        "description": "User feedback analysis",
+        "date_assist": 1627776000,
+        "topic": "User Experience"
+    },
+    {
+        "id": 23,
+        "member_uuid": "Z8Y7X6W5V4U3T2S",
+        "assisted_to_uuid": "U4V5W6X7Y8Z9A0B",
+        "description": "Help desk support",
+        "date_assist": 1654300800,
+        "topic": "Customer Support"
+    },
+    {
+        "id": 24,
+        "member_uuid": "Z8Y7X6W5V4U3T2S",
+        "assisted_to_uuid": "C1D2E3F4G5H6I7J",
+        "description": "Trained on software usage",
+        "date_assist": 1640995200,
+        "topic": "Software Training"
+    },
+    {
+        "id": 25,
+        "member_uuid": "Z8Y7X6W5V4U3T2S",
+        "assisted_to_uuid": "K2L3M4N5O6P7Q8R",
+        "description": "Guided through workflow updates",
+        "date_assist": 1706832000,
+        "topic": "Process Optimization"
+    },
+    {
+        "id": 26,
+        "member_uuid": "Z8Y7X6W5V4U3T2S",
+        "assisted_to_uuid": "S3T4U5V6W7X8Y9Z",
+        "description": "Guided through workflow updates",
+        "date_assist": 1634179200,
+        "topic": "Process Optimization"
+    },
+    {
+        "id": 27,
+        "member_uuid": "P1Q2R3S4T5U6V7W",
+        "assisted_to_uuid": "Z9A0B1C2D3E4F5G",
+        "description": "Reviewed technical documents",
+        "date_assist": 1661299200,
+        "topic": "Technical Writing"
+    },
+    {
+        "id": 28,
+        "member_uuid": "P1Q2R3S4T5U6V7W",
+        "assisted_to_uuid": "H4I5J6K7L8M9N0O",
+        "description": "Set up dev environment",
+        "date_assist": 1686182400,
+        "topic": "Development Operations"
+    },
+    {
+        "id": 29,
+        "member_uuid": "P1Q2R3S4T5U6V7W",
+        "assisted_to_uuid": "M8N9O0P1Q2R3S4T",
+        "description": "Optimized database",
+        "date_assist": 1720070400,
+        "topic": "Database Management"
+    },
+    {
+        "id": 30,
+        "member_uuid": "P1Q2R3S4T5U6V7W",
+        "assisted_to_uuid": "U4V5W6X7Y8Z9A0B",
+        "description": "Improved performance metrics",
+        "date_assist": 1696291200,
+        "topic": "Performance Analysis"
+    }
+]
