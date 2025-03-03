@@ -9,6 +9,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import SampleImage from "./../../assets/sample_profile.png";
 
 import "./member_skills.scss";
+import { BreadCrumbContent } from "../common/BreadCrumb";
 const MemberSkills = () => {
   const { uuid } = useParams(); // Get the uuid from the route params
   const [data, setData] = useState([]);
@@ -36,7 +37,10 @@ const MemberSkills = () => {
 
   return (
     <>
-      <Header />
+      <Header 
+        breadCrumbContent={BreadCrumbContent({ val1: "Home", val2: "Member Skills" })}
+      
+      />
       <div>
         <h3>
           Members with the skill :{" "}

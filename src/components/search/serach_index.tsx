@@ -71,7 +71,9 @@ const SearchPage = () => {
 
   return (
     <>
-      <Header />
+      <Header 
+      
+      />
       <div>
         <Dropdown
           value={selectedSearchType}

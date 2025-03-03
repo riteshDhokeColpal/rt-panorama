@@ -1,7 +1,8 @@
 import './Header.scss';
 import {useLocation,useNavigate} from 'react-router-dom';
 
-const Header = () =>{
+const Header = (props) =>{
+    console.log(props);
     const location = useLocation();
     const navigation = useNavigate();
     return<>
@@ -18,6 +19,9 @@ const Header = () =>{
     <div className="box"></div>
 
     <div className="box last">Logout</div>
+</div>
+<div style={{display:"flex",marginBottom:"15px"}}>
+    {props.breadCrumbContent}
 </div>
     </>
 }

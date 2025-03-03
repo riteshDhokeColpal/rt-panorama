@@ -11,6 +11,7 @@ import ProfileHeader from "./profile_header";
 import { TabView, TabPanel } from 'primereact/tabview';
 import { useEffect, useState } from 'react';
 import { IsMyprofileDataAtom, MyprofileDataAtom } from '../../atoms/my_profile';
+import { BreadCrumbContent } from '../common/BreadCrumb';
 const Profile = () =>{
     const navigate = useNavigate();
     const { uuid } = useParams(); // Get the uuid from the route params
@@ -47,10 +48,12 @@ const Profile = () =>{
         
     }, [uuid,setProfileData,MyprofileData]);
 
-   
+    
 
     return <>
-    <Header />
+    <Header 
+    breadCrumbContent={BreadCrumbContent({ val1: "Home", val2: (isMyProfile) ? "My Profile" : "Profile" })}
+    />
     <ProfileHeader />
 
     <div className="card">

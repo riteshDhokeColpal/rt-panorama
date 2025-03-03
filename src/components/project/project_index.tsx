@@ -4,6 +4,7 @@ import ProjectHeader from "./project_header";
 import ProjectSection from "./project_section";
 import { useEffect, useState } from "react";
 import { fetchProjectByUuid, fetchProjectMembersByUuid } from "../../service/project/project_service";
+import { BreadCrumbContent } from "../common/BreadCrumb";
 
 const Project = () =>{
   const { uuid } = useParams(); // Get the uuid from the route params
@@ -31,9 +32,11 @@ const Project = () =>{
 
     fetchProject();
   }, [uuid]);
-  console.log(ProjectMembers);
     return <>
-        <Header/>
+        <Header
+    breadCrumbContent={BreadCrumbContent({ val1: "Home", val2: "Project Info" })}
+        
+        />
         <ProjectHeader projectData={data}/>
         <ProjectSection ProjectMembers={ProjectMembers}/>
     </>
