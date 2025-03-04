@@ -20,34 +20,65 @@ const ProfileHeader = () => {
   const toast = useRef(null);
   return (
     <>
-    <Toast ref={toast} />
+      <Toast ref={toast} />
       <div>
-        <div style={{ display: "flex", border: "1px solid #d3020e",borderRadius:"10px" }}>
+        <div
+          style={{
+            display: "flex",
+            border: "1px solid #d3020e",
+            borderRadius: "10px",
+          }}
+        >
           <div className="mr-10rem">
             <img src={SampleImage} height={200} width={200} />
             <div>
               <i
                 className="pi pi-envelope"
-                style={{ fontSize: "1rem", cursor: "pointer",color:"#d3020e" }}
+                style={{
+                  fontSize: "1rem",
+                  cursor: "pointer",
+                  color: "#d3020e",
+                }}
                 onClick={() =>
                   (window.location.href = `mailto:${profileData.email}`)
                 }
               ></i>
             </div>
           </div>
-          <div className="mr-10rem" style={{alignContent: "center",textAlign:"start"}}>
-            <div>Name : <span style={{fontWeight:"bold"}}>{profileData?.name}</span></div>
-            <div>Designation: <span style={{fontWeight:"bold"}}>{profileData?.designation}</span></div>
-            <div>Location: <span style={{fontWeight:"bold"}}>{profileData?.location}</span></div>
+          <div
+            className="mr-10rem"
+            style={{ alignContent: "center", textAlign: "start" }}
+          >
+            <div>
+              Name :{" "}
+              <span style={{ fontWeight: "bold" }}>{profileData?.name}</span>
+            </div>
+            <div>
+              Designation:{" "}
+              <span style={{ fontWeight: "bold" }}>
+                {profileData?.designation}
+              </span>
+            </div>
+            <div>
+              Location:{" "}
+              <span style={{ fontWeight: "bold" }}>
+                {profileData?.location}
+              </span>
+            </div>
             {/* <div>People Manager</div> */}
           </div>
           <div className="mr-10rem">
-            <div style={{marginTop:"3rem"}}>Status - <span style={{fontWeight:"bold"}}>{profileData?.member_status}</span></div>
+            <div style={{ marginTop: "3rem" }}>
+              Status -{" "}
+              <span style={{ fontWeight: "bold" }}>
+                {profileData?.member_status}
+              </span>
+            </div>
             {/* <div>Primary Skills - DevOps</div> */}
             {!isMyProfile && (
-              <div style={{marginTop:"3rem"}}>
+              <div style={{ marginTop: "3rem" }}>
                 <Button
-                style={{marginRight:"1rem"}}
+                  style={{ marginRight: "1rem" }}
                   label="Give Thank you"
                   size="small"
                   onClick={() => {
@@ -74,7 +105,10 @@ const ProfileHeader = () => {
                 setVisibleAssistModal(false);
               }}
             >
-              <GiveAssistModal setVisibleAssistModal={setVisibleAssistModal} toast={toast}/>
+              <GiveAssistModal
+                setVisibleAssistModal={setVisibleAssistModal}
+                toast={toast}
+              />
             </Dialog>
 
             <Dialog
@@ -86,13 +120,29 @@ const ProfileHeader = () => {
                 setVisibleRequestAssistModal(false);
               }}
             >
-              <RequestAssistModal setVisibleAssistModal={setVisibleRequestAssistModal}toast={toast}/>
+              <RequestAssistModal
+                setVisibleAssistModal={setVisibleRequestAssistModal}
+                toast={toast}
+              />
             </Dialog>
           </div>
           <div
             className="mr-10rem"
             style={{ position: "absolute", right: 0, marginTop: "1rem" }}
           >
+            {isMyProfile && (
+              <i
+                className="pi pi-pencil"
+                onClick={() => {
+                  // setVisibleSkillsetModal(true);
+                }}
+                style={{
+                  color: "#d3020e",
+                  marginLeft: "auto",
+                  cursor: "pointer",
+                }}
+              ></i>
+            )}
             <div>
               {/* <button
                 onClick={() => {

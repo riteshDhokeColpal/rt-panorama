@@ -1,15 +1,16 @@
 import './Header.scss';
 import {useLocation,useNavigate} from 'react-router-dom';
-
+import panorama_logo from './../../assets/panorama_logo.png'
 const Header = (props) =>{
-    console.log(props);
     const location = useLocation();
     const navigation = useNavigate();
     return<>
     <div className="flex-container">
-    <div className={`box ${(location.pathname === '' || location.pathname === '/') ? 'active' : ''}`} onClick={()=>{
+    <div className={`logo_box`} onClick={()=>{
         navigation('/')
-    }}>Logo</div>
+    }}>
+        <img src={panorama_logo}></img>
+    </div>
     <div onClick={()=>{
         navigation('/my-profile')
     }} className={`box ${(location.pathname === '/my-profile') ? 'active' : ''}`} >My Profile</div>

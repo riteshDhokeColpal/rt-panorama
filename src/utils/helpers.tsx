@@ -26,6 +26,7 @@ export const transformApiResponseToTreeData = (apiResponse) => {
           },
           children: member.skills.filter(skill => skill).map((skill, index) => ({
             label: skill || `Skill ${index + 1}`,
+            skill_uuid:member.skill_uuid[index],
             // className: "text-white",
             style: { borderRadius: "12px",backgroundColor:"#fff",color:'#d3020e',border:'1px solid #d3020e' },
           })),
@@ -35,6 +36,8 @@ export const transformApiResponseToTreeData = (apiResponse) => {
   
     return treeData;
   };
+
+
 
 
   export function convertTimestampAndCalculateDifference(unixTimestamp) {

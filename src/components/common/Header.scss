@@ -15,6 +15,22 @@
     flex: 1; /* Allows boxes to grow equally in their space */
     color: white;
 }
+.logo_box{
+    cursor: pointer;
+    text-align: center;
+    flex: 1; /* Allows boxes to grow equally in their space */
+    color: white;
+
+    img{
+        height: 54px;
+    width: 12rem;
+    margin-top: 8px;
+    border-radius: 7px;
+    background: white;
+    margin-left: 10px;
+    }
+}
+
 
 .last {
     margin-left: auto; /* Push this item to the end of the flex container */

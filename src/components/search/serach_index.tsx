@@ -90,7 +90,6 @@ const SearchPage = () => {
           completeMethod={search} // Set the search function for autocomplete
           field="name" // Specify the field to show for suggestions, assuming it is 'name'
           onChange={(e) => setValue(e.value)}
-          // onSelect={(e) => console.log("Selected:", e.value)} // Just an example event
         />
       </div>
 

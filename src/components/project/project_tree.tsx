@@ -180,9 +180,17 @@ const ProjectTree = (props) => {
         onSelectionChange={(e) => {
           let member_uuid = e?.data[0]?.data?.uuid;
           // navigate()
+          
           if (member_uuid) {
             window.open(
               `/profile/${member_uuid}`,
+              "_blank",
+              "noopener,noreferrer"
+            );
+          }
+          if(e?.data[0]?.skill_uuid){
+            window.open(
+              `/member-by-skills/${e?.data[0]?.skill_uuid}`,
               "_blank",
               "noopener,noreferrer"
             );

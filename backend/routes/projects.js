@@ -122,7 +122,7 @@ router.get('/project_members/:uuid', (req, res) => {
       const memberIds = memberRows.map(member => member.id);
       if (memberIds.length > 0) {
         db.all(
-          `SELECT ms.member_id, mk.name 
+          `SELECT ms.member_id, mk.name,mk.uuid as skill_uuid
            FROM member_skills ms 
            JOIN master_skills mk ON ms.skillset_id = mk.id 
            WHERE ms.member_id IN (${memberIds.join(',')})`,
@@ -137,9 +137,13 @@ router.get('/project_members/:uuid', (req, res) => {
                 .filter(skill => skill.member_id === member.id)
                 .map(skill => skill.name);
 
+                const skill_uuid = skillsRows
+                .filter(skill => skill.member_id === member.id)
+                .map(skill => skill.skill_uuid);
               return {
                 ...member,
                 skills,
+                skill_uuid
               };
             });
 

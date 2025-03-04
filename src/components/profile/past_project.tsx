@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { fetchPastProjectsOfMemberByUUID } from "../../service/project/project_service";
 import { useEffect, useState } from "react";
 import { DataTable } from "primereact/datatable";
@@ -11,7 +11,7 @@ import { IsMyprofileDataAtom, MyprofileDataAtom } from "../../atoms/my_profile";
 const PastProject = () => {
   const [isMyProfile] = useAtom(IsMyprofileDataAtom);
   const [profileData] = useAtom(MyprofileDataAtom);
-
+  const navigate = useNavigate();
 
   const { uuid } = useParams();
   const [data, setData] = useState([]);
@@ -44,30 +44,61 @@ const PastProject = () => {
   }, [uuid]);
   return (
     <>
-      
-          <DataTable value={data} tableStyle={{ minWidth: '50rem' }}>
-                <Column field="name" header="Project Name"></Column>
-                <Column field="start_date" header="Project Onboard" body={(row)=>{
-                  return <>
-                    {convertUnixToYearMonth(row.start_date)}
-                  </>
-                }}></Column>
-                <Column field="end_date" header="Project Exit" body={(row)=>{
-                  return <>
-                    {convertUnixToYearMonth(row.end_date)}
-                  </>
-                }}></Column>
-                <Column field="end_date" header="Time in Project" body={(row)=>{
-                  return <>
-                  {calculateDateDifference(row.start_date,row.end_date)}
-                  </>
-                }}></Column>
-                <Column field="github_repo_url" header="Git Repo" body={(row)=>{
-                  return <>
-                  <a href={row.github_repo_url}>{row.name}</a>
-                  </>
-                }}></Column>
-            </DataTable>
+      <DataTable value={data} tableStyle={{ minWidth: "50rem" }}>
+      <Column
+            field="name"
+            header="Project Name"
+            body={(row) => {
+                return (
+                    <>
+                        <span
+                          style={{
+                            color:"#d3020e",
+                            fontWeight:"600",
+                            cursor:"pointer",
+                            textDecoration: "underline"
+                          }}
+                            onClick={() => {
+                              window.open(`project/${row?.uuid}`, '_blank');
+                            }}
+                        >{row?.name}</span>
+                    </>
+                );
+            }}
+        ></Column>
+        <Column
+          field="start_date"
+          header="Project Onboard"
+          body={(row) => {
+            return <>{convertUnixToYearMonth(row.start_date)}</>;
+          }}
+        ></Column>
+        <Column
+          field="end_date"
+          header="Project Exit"
+          body={(row) => {
+            return <>{convertUnixToYearMonth(row.end_date)}</>;
+          }}
+        ></Column>
+        <Column
+          field="end_date"
+          header="Time in Project"
+          body={(row) => {
+            return <>{calculateDateDifference(row.start_date, row.end_date)}</>;
+          }}
+        ></Column>
+        <Column
+          field="github_repo_url"
+          header="Git Repo"
+          body={(row) => {
+            return (
+              <>
+                <a href={row.github_repo_url}>{row.name}</a>
+              </>
+            );
+          }}
+        ></Column>
+      </DataTable>
     </>
   );
 };

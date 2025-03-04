@@ -23,8 +23,6 @@ const AssistCard = () => {
 
   useEffect(() => {
 
-/*************  ✨ Codeium Command ⭐  *************/
-/******  267434fa-d42d-4272-a6dd-50717feb8d43  *******/
     const show = () => {
       toast.current.show({
         severity: "success",
@@ -36,7 +34,7 @@ const AssistCard = () => {
 
     async function getAssists() {
       try {
-        const skillsData = await fetchAssistByMemberUuid(memberUuid);
+        const skillsData = await fetchAssistByMemberUuid(profileData?.uuid);
 
         setAssistsData(skillsData);
         let stats = getAssistStats(skillsData);
@@ -45,11 +43,10 @@ const AssistCard = () => {
         setAssistsData("Failed to fetch skills");
       }
     }
-
-    if (memberUuid) {
+    if (profileData?.uuid) {
       getAssists();
     }
-  }, [memberUuid]);
+  }, [memberUuid,profileData]);
   return (
     <>
       <Toast ref={toast} />
